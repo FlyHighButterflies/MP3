@@ -1,0 +1,23 @@
+players = sorted(["LeBron James", "De'Andre Hunter", "Darius Garland","Jarett Allen", "Donovan Mitchell", "Evan mobley"])
+
+def binary_search(players, target):
+    if not players:
+        return False
+    mid = len(players) // 2
+    if players[mid].lower() == target.lower():
+        return True
+    elif target.lower() < players[mid].lower():
+        return binary_search(players[:mid], target)  
+    else:
+        return binary_search(players[mid+1:], target)
+
+player_name = input("Enter NBA player name to search: ")
+
+if binary_search(players, player_name):
+    print(f" {player_name} is in the list!")
+else:
+    print(f" {player_name} is NOT in the list.")
+
+# the player is being search using decrease and conquer
+# we decrease the list by a half every step but every step, it still copies the list. so, in short, we need a lot of memory if we want to include all the players on the list.
+# we have given 6 players which is okay, but how more if there is a thousand players to be searched?
