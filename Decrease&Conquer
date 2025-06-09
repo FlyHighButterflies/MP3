@@ -1,4 +1,4 @@
-lebron_games = [25, 30, 27, 22, 35, 29, 26, 31, 24, 28]  
+lebron_games = [25, 30, 27, 22, 35, 29, 26, 31, 24, 28]  # RECURSIVE
 
 def sum_points(points):
     if not points:
