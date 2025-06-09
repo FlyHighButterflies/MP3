@@ -1,4 +1,4 @@
-players = sorted(["LeBron James", "De'Andre Hunter", "Darius Garland","Jarett Allen", "Donovan Mitchell", "Evan mobley"])
+players = sorted(["LeBron James", "De'Andre Hunter", "Darius Garland","Jarett Allen", "Donovan Mitchell", "Evan mobley"])  #BINARY SEARCH ALGO
 
 def binary_search(players, target):
     if not players:
